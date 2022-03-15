@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
@@ -6,6 +6,15 @@ import About from "./components/About";
 import Home from "./pages/Home";
 
 const App = () => {
+  const [mode,setMode]=useState("light")
+  const toggleMode=()=>{
+
+    if(mode==="dark"){
+      setMode("light")
+    }else{
+      setMode("dark")
+    }
+  }
   return (
     <>
       <Navbar
@@ -13,6 +22,8 @@ const App = () => {
         aboutText="About"
         homeText="Home"
         contactText="Contact Us"
+        mode={mode}
+        toggleMode={toggleMode}
       />
       {/* <Navbar/> */}
       <TextForm heading="enter the text to Analyz"/>
