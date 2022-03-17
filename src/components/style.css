@@ -28,3 +28,35 @@ border: 1px solid grey;
 margin-top: 4px;
 
 }
+.paragraph{
+
+
+}
+.arrayButton{
+    /* display: flex; */
+/* justify-content: end; */
+text-align: end;
+padding-left: 200ox;
+
+}
+.mainDiv_array{
+    display: flex;
+    border: 2px solid grey;
+    width: 450px;
+border-radius: 11px;
+padding: 10px;
+justify-content: space-between;
+margin: 20px;
+
+}
+.containe_clas{
+    /* display: flex; */
+text-align: center;
+/* align-content: center; */
+align-items: center;
+}
+.reducer_container{
+    /* display: flex; */
+justify-content: center;
+text-align: center;
+}

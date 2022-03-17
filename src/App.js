@@ -7,6 +7,9 @@ import Contact from "./components/Contact";
 import UseEffectApi from "./components/UseEffectApi";
 import ToDoList from "./components/ToDoList";
 import UseStateArray from "./components/UseStateArray";
+import UpdateObject from "./components/UpdateObject";
+import UcontrolledCom from "./components/UcontrolledCom";
+import UseReducerHook from "./components/UseReducerHook";
 // import Home from "./pages/Home";
 
 const App = () => {
@@ -43,10 +46,17 @@ const App = () => {
           ></Route>
           <Route exact path="/about" element={<About />}></Route>
           <Route path="/useeffect" element={<Contact />}></Route>
-          <Route path="/fetchingapi" element={<UseEffectApi mode={mode}/>}></Route>
-          <Route path="/todolist" element={<ToDoList/>}></Route>
-          <Route path="/statearray" element={<UseStateArray/>}></Route>
+          <Route
+            path="/fetchingapi"
+            element={<UseEffectApi mode={mode} />}
+          ></Route>
+          <Route path="/todolist" element={<ToDoList />}></Route>
+          <Route path="/statearray" element={<UseStateArray />}></Route>
+          <Route path="/objectupdated" element={<UpdateObject />}></Route>
+          <Route path="/uncontrolled" element={<UcontrolledCom />}></Route>
+          <Route path="/usereducer" element={<UseReducerHook/>}></Route>
 
+          
 
           {/* <Route path="/formcom" element={<TextForm/>}></Route> */}
         </Routes>

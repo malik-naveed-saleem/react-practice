@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 const Navbar = (props) => {
   return (
     <>
-      <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
+      <nav
+        className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
+      >
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             {props.title}
@@ -32,7 +34,7 @@ const Navbar = (props) => {
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/about">
-                   {props.aboutText}
+                  {props.aboutText}
                 </Link>
               </li>
               <li className="nav-item">
@@ -55,6 +57,21 @@ const Navbar = (props) => {
                   UseState Array
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/objectupdated">
+                  Update Object
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/usereducer">
+                  Use Reducer
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/uncontrolled">
+                  UnControlled Components
+                </NavLink>
+              </li>
             </ul>
             {/* <form className="d-flex">
               <input
@@ -67,10 +84,26 @@ const Navbar = (props) => {
                 Search
               </button>
             </form> */}
-            <div className={`form-check form-switch text-${props.mode==="light"? "dark":"light"}`} >
-  <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.toggleMode}/>
-  <label className="form-check-label " htmlFor="flexSwitchCheckDefault"> checkbox </label>
-</div>
+            <div
+              className={`form-check form-switch text-${
+                props.mode === "light" ? "dark" : "light"
+              }`}
+            >
+              <input
+                className="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckDefault"
+                onClick={props.toggleMode}
+              />
+              <label
+                className="form-check-label "
+                htmlFor="flexSwitchCheckDefault"
+              >
+                {" "}
+                checkbox{" "}
+              </label>
+            </div>
           </div>
         </div>
       </nav>
