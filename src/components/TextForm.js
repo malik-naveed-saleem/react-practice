@@ -22,9 +22,10 @@ const TextForm = (props) => {
   return (
     <>
       <div className="container">
-        <h1>{props.heading} </h1>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
+        <h1 style={{color:props.mode==="light"? "black":"white"}}>{props.heading} </h1>
+        <div className="mb-3"           
+>
+          <label for="exampleFormControlInput1" className="form-label" style={{color:props.mode==='light'? 'black':'white'}}>
             Enter text here to Convert To Upper Case
           </label>
           <textarea
@@ -33,6 +34,7 @@ const TextForm = (props) => {
             value={text}
             rows="8"
             onChange={handleOnChange}
+            style={{backgroundColor:props.mode==='light'? "white":"grey",color:props.mode==='dark'? "white":"black"}}
           ></textarea>
           <button
             className="btn btn-primary mt-2 mx-2"
@@ -55,14 +57,13 @@ const TextForm = (props) => {
         </div>
       </div>
       <div className="container my-2">
-        <h2> your text summary</h2>
-        <p>
-          {" "}
+        <h2 style={{color:props.mode==="light"? "black":"white"}}> your text summary</h2>
+        <p style={{color:props.mode==="light"? "black":"white"}}>
           {text.split(" ").length} words and {text.length} character{" "}
         </p>
-        <p>{0.008 * text.split(" ").length} Minutes to read this paragraph</p>
-        <h2>Preview</h2>
-        <p>{text}</p>
+        <p style={{color:props.mode==="light"? "black":"white"}}>{0.008 * text.split(" ").length} Minutes to read this paragraph</p>
+        <h2 style={{color:props.mode==="light"? "black":"white"}}>Preview</h2>
+        <p style={{color:props.mode==="light"? "black":"white"}}>{text===""? "enter sosmething here":text}</p>
       </div>
     </>
   );

@@ -1,0 +1,30 @@
+/* h1 button{
+display: flex;
+
+justify-content: center;
+
+} */
+.user_div{
+    /* display: flex; */
+    justify-content: center;
+    text-align: center;
+}
+.todo_container{
+    display: flex;
+    justify-content: center;
+}
+.todo_input{
+    display: flex;
+justify-content: center;}
+.dlt_item{
+display: flex;
+justify-content: center;
+
+
+}
+.comming_item{
+width: 200px;
+border: 1px solid grey;
+margin-top: 4px;
+
+}
